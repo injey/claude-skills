@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="$if(lang)$$lang$$else$en$endif$">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$title$</title>
+$for(header-includes)$
+$header-includes$
+$endfor$
+$if(highlighting-css)$
+<style>
+$highlighting-css$
+</style>
+$endif$
+</head>
+<body>
+<main class="doc">
+$if(cover-band)$
+<header class="cover cover-band">
+$if(logo)$  <img class="logo" src="$logo$" alt="">$endif$
+  <h1 class="title">$title$</h1>
+$if(subtitle)$  <p class="subtitle">$subtitle$</p>$endif$
+  <dl class="meta">
+$if(author)$    <dt>Author</dt><dd>$for(author)$$author$$sep$, $endfor$</dd>$endif$
+$if(audience)$    <dt>Audience</dt><dd>$audience$</dd>$endif$
+$if(status)$    <dt>Status</dt><dd>$status$</dd>$endif$
+$if(version)$    <dt>Version</dt><dd>$version$</dd>$endif$
+$if(date)$    <dt>Date</dt><dd>$date$</dd>$endif$
+$if(classification)$    <dt>Classification</dt><dd>$classification$</dd>$endif$
+  </dl>
+</header>
+$endif$
+$if(cover-plain)$
+<header class="cover cover-plain">
+$if(logo)$  <img class="logo" src="$logo$" alt="">$endif$
+  <h1 class="title">$title$</h1>
+$if(subtitle)$  <p class="subtitle">$subtitle$</p>$endif$
+  <p class="meta-line">$if(author)$$for(author)$$author$$sep$, $endfor$$endif$$if(date)$ · $date$$endif$$if(version)$ · v$version$$endif$$if(status)$ · $status$$endif$$if(classification)$ · $classification$$endif$</p>
+</header>
+$endif$
+$if(toc)$
+<nav id="TOC" class="toc">
+<p class="toc-title">Contents</p>
+$table-of-contents$
+</nav>
+$endif$
+$body$
+</main>
+</body>
+</html>

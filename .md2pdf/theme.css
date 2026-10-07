@@ -1,0 +1,22 @@
+/* Overrides for notes and other Markdown in this repository, loaded after the Circana theme in
+   .claude/skills/markdown-docs/themes/circana/ (the single source of the Circana look).
+   These are the dense-notes rules from the former project md-to-pdf skill. */
+@media print {
+  .doc { font-size: 10pt; }
+  .doc table { break-inside: auto; }
+  .doc thead { display: table-header-group; }
+  .doc tr { break-inside: avoid; }
+  .doc pre { white-space: pre-wrap; word-break: break-word; }
+}
+.doc td code, .doc th code { word-break: break-word; }
+.doc pre { white-space: pre-wrap; }
+.doc ul.task-list { list-style: none; padding-left: 6px; }
+.doc ul.task-list input { margin-right: 8px; }
+
+/* GitHub alerts (> [!NOTE] ...) and ::: note / tip / important / warning / caution, in Circana colours */
+.note, .tip, .important, .warning, .caution { border-left: 6px solid var(--purple); background: var(--tint-purple);
+  border-radius: var(--radius); padding: 12px 18px; margin: 14px 0; }
+.tip { border-left-color: var(--peach); background: var(--tint-peach); }
+.important { border-left-color: var(--magenta); background: var(--tint-magenta); }
+.warning, .caution { border-left-color: var(--yellow); background: var(--tint-yellow); }
+.callout-title { font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .85em; margin-bottom: 4px; }

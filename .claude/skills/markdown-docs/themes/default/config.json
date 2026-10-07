@@ -1,0 +1,19 @@
+{
+  "accent": "#3B4CCA",
+  "ink": "#1F2430",
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter",
+    "mono": "JetBrains Mono"
+  },
+  "google_fonts": true,
+  "page": { "size": "A4", "margin": "18mm 17mm 20mm 17mm" },
+  "cover": "band",
+  "toc": true,
+  "toc_depth": 2,
+  "numbered": "auto",
+  "logo": null,
+  "footer": { "left": "{title}", "right": "Page {page} of {pages}" },
+  "meta": {},
+  "outputs": { "document": "pdf", "deck": "both" }
+}
